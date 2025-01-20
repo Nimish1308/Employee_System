@@ -9,7 +9,7 @@ const Details = () => {
     const { id } = useParams();
     const [record, setRecord] = useState([]);
     const getRecord = async () => {
-        const res = await axios.get(`https://employee-system-api.vercel.app/findbyid/${id}`)
+        const res = await axios.get(`https://employee-system-api.vercel.app/findbyid/${id}`,{ withCredentials: true } )
         const store = res.data;
         setRecord(store)
     }
