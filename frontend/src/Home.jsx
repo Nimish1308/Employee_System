@@ -25,7 +25,7 @@ const Home = () => {
 
     const handleSubmit=async(event)=>{
         event.preventDefault();
-        const res=await axios.post(`https://employee-system-api.vercel.app/create`,input);
+        const res=await axios.post(`https://employee-system-api.vercel.app/create`,input,{ withCredentials: true } );
        
         console.log(`Record Created`)
     }
