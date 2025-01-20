@@ -148,13 +148,13 @@ const Records = () => {
                             <div data-aos="zoom-out">
                                 
                             </div>
-                                <NavLink to={`https://employee-system-api.vercel.app/findbyid/${item._id}`}>
+                                <NavLink to={`/findbyid/${item._id}`}>
                                     <Button variant="success" style={{ margin: '2px' }}>
                                         Details
                                     </Button>
                                 </NavLink>
 
-                                <NavLink to={`https://employee-system-api.vercel.app/update/${item._id}`}>
+                                <NavLink to={`/update/${item._id}`}>
                                     <Button variant="warning" style={{ margin: '2px' }}>
                                         Update
                                     </Button>
