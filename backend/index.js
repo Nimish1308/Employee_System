@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json({limit:'10mb'}));
 app.use(cors({
-    origin: 'https://transaction-system-frontend.vercel.app', // Frontend URL for CORS
+    origin: 'https://employee-system-frontend-nine.vercel.app', // Frontend URL for CORS
     credentials: true
 }));
 
