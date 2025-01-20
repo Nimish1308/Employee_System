@@ -39,14 +39,14 @@ const Update = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const res = await axios.put(`https://employee-system-api.vercel.app/update/${id}`, input);
+        const res = await axios.put(`https://employee-system-api.vercel.app/update/${id}`, input,{ withCredentials: true } );
         getRecord();
         console.log("Record Updated")
         window.alert("Record Updated");
     }
 
     const getRecord = async () => {
-        const res = await axios.get(`https://employee-system-api.vercel.app/findbyid/${id}`);
+        const res = await axios.get(`https://employee-system-api.vercel.app/findbyid/${id}`,{ withCredentials: true } );
         setInput({
             name: res.data.name,
             age: res.data.age,
