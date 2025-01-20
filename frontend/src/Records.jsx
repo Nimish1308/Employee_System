@@ -35,7 +35,7 @@ const Records = () => {
 
 
     const getRecord = async () => {
-        const res = await axios.get(`https://employee-system-api.vercel.app/find`);
+        const res = await axios.get(`https://employee-system-api.vercel.app/find`,{ withCredentials: true } );
         const store = res.data;
         setRecord(store);
         setFilter(store);
@@ -76,7 +76,7 @@ const Records = () => {
 
     // Delete
     const handleDelete = async (id) => {
-        const res = await axios.delete(`https://employee-system-api.vercel.app/delete/${id}`);
+        const res = await axios.delete(`https://employee-system-api.vercel.app/delete/${id}`,{ withCredentials: true } );
         getRecord();
         console.log("Record Deleted");
     };
