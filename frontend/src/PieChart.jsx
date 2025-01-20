@@ -23,7 +23,7 @@ const PieChart = () => {
 
   useEffect(() => {
     const getRecord = async () => {
-      const res = await axios.get(`http://localhost:5000/find`);
+      const res = await axios.get(`https://employee-system-api.vercel.app/find`);
       const store = res.data;
       setGenderDistribution(store);
     };
